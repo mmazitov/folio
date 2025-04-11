@@ -1,0 +1,55 @@
+@import 'tailwindcss';
+
+:root {
+	--background: #ffffff;
+	--foreground: #171717;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-geist-sans);
+	--font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
+}
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+/* Стили для скроллбара */
+.about::-webkit-scrollbar {
+	width: 8px; /* Ширина скроллбара */
+}
+
+.about::-webkit-scrollbar-track {
+	background: #f0f0f0; /* Цвет фона трека */
+}
+
+.about::-webkit-scrollbar-thumb {
+	background: #888; /* Цвет ползунка */
+	border-radius: 4px; /* Скругление углов */
+}
+
+.about::-webkit-scrollbar-thumb:hover {
+	background: #555; /* Цвет ползунка при наведении */
+}
+
+/* Для кроссбраузерной поддержки */
+.about {
+	scrollbar-width: thin; /* Для Firefox: тонкий скроллбар */
+	scrollbar-color: #888 #f0f0f0; /* Цвет ползунка и трека */
+}
