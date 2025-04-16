@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 
 const PageAnimate = () => {
